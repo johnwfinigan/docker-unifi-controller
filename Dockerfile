@@ -2,8 +2,7 @@
 #
 # the unifi contoller is used to admin ubunquty wifi access points
 #
-FROM ubuntu
-MAINTAINER stuart nixon dotcomstu@gmail.com
+FROM ubuntu:16.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN mkdir -p /var/log/supervisor /usr/lib/unifi/data && \
