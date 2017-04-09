@@ -12,7 +12,7 @@ RVOL = /usr/lib/unifi/data
 
 .PHONY: all build test tag_latest release ssh
 
-all: build tag_latest push
+all: build tag_latest
 
 push: push_latest
 push_latest:
