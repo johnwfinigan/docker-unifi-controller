@@ -18,6 +18,6 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
     apt-get install -q -y unifi
 
 VOLUME /usr/lib/unifi/data
-EXPOSE  8443 8880 8080 27117
+EXPOSE  8443 8843 8880 8080 3478
 WORKDIR /usr/lib/unifi
 CMD ["java", "-Xmx256M", "-jar", "/usr/lib/unifi/lib/ace.jar", "start"]
