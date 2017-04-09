@@ -15,9 +15,10 @@ ADD ./100-ubnt.list /etc/apt/sources.list.d/100-ubnt.list
 # update then install
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
     apt-get update -q -y && \
+    apt-get install -q -y apt-utils && \
     apt-get install -q -y unifi
 
 VOLUME /usr/lib/unifi/data
-EXPOSE  8443 8843 8880 8080 3478
+EXPOSE  8443 8843 8880 8080 3478/udp 27017
 WORKDIR /usr/lib/unifi
-CMD ["java", "-Xmx256M", "-jar", "/usr/lib/unifi/lib/ace.jar", "start"]
+CMD ["java", "-Xmx400M", "-jar", "/usr/lib/unifi/lib/ace.jar", "start"]
