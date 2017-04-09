@@ -15,7 +15,7 @@ ADD ./100-ubnt.list /etc/apt/sources.list.d/100-ubnt.list
 # update then install
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
     apt-get update -q -y && \
-    apt-get install -q -y mongodb-server unifi
+    apt-get install -q -y unifi
 
 VOLUME /usr/lib/unifi/data
 EXPOSE  8443 8880 8080 27117
