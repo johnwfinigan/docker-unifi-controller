@@ -14,7 +14,6 @@ ADD ./100-ubnt.list /etc/apt/sources.list.d/100-ubnt.list
 # add ubiquity + 10gen(mongo) repo + key
 # update then install
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10 && \
     apt-get update -q -y && \
     apt-get install -q -y mongodb-server unifi
 
