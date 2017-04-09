@@ -20,7 +20,7 @@ push_latest:
 
 
 build:
-	docker build -t="$(REPO):$(VERSION)" --rm --no-cache .
+	docker build -t="$(REPO):$(VERSION)" --rm .
 
 
 
